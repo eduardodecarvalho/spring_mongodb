@@ -2,23 +2,22 @@ package com.eduardo.service;
 
 import java.util.List;
 
+import org.springframework.stereotype.Service;
+
 import com.eduardo.model.User;
 import com.eduardo.model.dto.UserDTO;
 import com.eduardo.model.mapper.UserMapper;
 
+@Service
 public class UserService {
 
-    private final UserMapper userMapper = null;
+    private UserMapper mapper;
 
-    public List<User> findAll() {
-
-        final UserDTO users = userMapper(user);
+    public List<UserDTO> findAll() {
+        final User user = new User();
+        final UserDTO users = mapper.map(user);
 
         return null;
-    }
-
-    public UserMapper getUserMapper() {
-        return userMapper;
     }
 
 }
